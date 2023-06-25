@@ -30,6 +30,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create an Acount"/>
+                                <connections>
+                                    <segue destination="i76-TV-fbR" kind="show" id="aQF-5a-s94"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -39,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705" y="150"/>
+            <point key="canvasLocation" x="1631.2977099236641" y="150"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Tza-jg-f3L">
@@ -85,24 +88,26 @@
                     <connections>
                         <outlet property="emailTextField" destination="xiY-Gl-ebc" id="XT8-be-w3z"/>
                         <outlet property="passwordTextField" destination="Fw0-UZ-IZh" id="rtg-XY-JWu"/>
+                        <segue destination="Xs3-ep-lVU" kind="show" identifier="goToNext" id="qs9-cy-bEM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVx-is-HKY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414.5038167938931" y="-144.36619718309859"/>
+            <point key="canvasLocation" x="2341.2213740458014" y="-144.36619718309859"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bxf-qw-fn4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sNC-hs-O8L" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="vh8-kv-3jT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fxw-fx-Rgd">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Wnw-Tb-Q3O"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0hR-8L-MCJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bvx-zi-Uz5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -153,16 +158,39 @@
                     <connections>
                         <outlet property="emailTextField" destination="qvc-3p-Tgb" id="LKg-vH-KLG"/>
                         <outlet property="passwordTextField" destination="tOV-99-TsW" id="qKt-FF-AHe"/>
+                        <segue destination="Xs3-ep-lVU" kind="show" identifier="goToNext" id="L2H-9i-Q9G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4tv-YX-GvY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1415" y="504"/>
+            <point key="canvasLocation" x="2341.2213740458014" y="503.52112676056339"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9Op-TL-ydF">
+            <objects>
+                <viewController id="Xs3-ep-lVU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j1v-a8-P34">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Bes-xE-kvF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TL3-v8-KX1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIG-J4-1OS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3150.3816793893129" y="206.33802816901411"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qs9-cy-bEM"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
