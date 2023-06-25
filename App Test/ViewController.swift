@@ -37,7 +37,18 @@ class ViewController: UIViewController {
                 //do something with the contact
                 
                 print(contact.givenName)
-                
+                for number in contact.phoneNumbers {
+                    
+                    switch number.label {
+                        case CNLabelPhoneNumberMobile:
+                            print("- Mobile: \(number.value.stringValue)")
+                        case CNLabelPhoneNumberMain:
+                            print("- Main: \(number.value.stringValue)")
+                        default:
+                            print("-Other: \(number.value.stringValue)")
+                    }
+                    
+                }
             })
         }
         catch {
