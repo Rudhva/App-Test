@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="705" y="150"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Tza-jg-f3L">
             <objects>
-                <viewController id="cFS-5A-jK8" customClass="ViewController" customModule="App_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cFS-5A-jK8" customClass="LoginViewController" customModule="App_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vjq-4f-anL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,12 +73,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Let's Go!"/>
+                                <connections>
+                                    <action selector="loginClicked:" destination="cFS-5A-jK8" eventType="touchUpInside" id="WTP-Vf-dQa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kti-0v-RvW"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y9t-8Z-pWG"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="xiY-Gl-ebc" id="XT8-be-w3z"/>
+                        <outlet property="passwordTextField" destination="Fw0-UZ-IZh" id="rtg-XY-JWu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVx-is-HKY" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="-202.29007633587784" y="-60.563380281690144"/>
         </scene>
-        <!--View Controller-->
+        <!--Create View Controller-->
         <scene sceneID="J5g-cs-68u">
             <objects>
-                <viewController id="i76-TV-fbR" customClass="ViewController" customModule="App_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="i76-TV-fbR" customClass="CreateViewController" customModule="App_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jnj-jk-hoY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,12 +141,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign me up!"/>
+                                <connections>
+                                    <action selector="createClicked:" destination="i76-TV-fbR" eventType="touchUpInside" id="mGH-sE-Bl6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="58h-d7-OSF"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="e7F-TO-vgC"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="qvc-3p-Tgb" id="LKg-vH-KLG"/>
+                        <outlet property="passwordTextField" destination="tOV-99-TsW" id="qKt-FF-AHe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4tv-YX-GvY" sceneMemberID="firstResponder"/>
             </objects>
