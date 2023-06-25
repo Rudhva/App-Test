@@ -13,25 +13,36 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        Task.init {
+            await fetchAllContacts()
+        }
     }
     
-    func fetchAllContacts() {
+    
+    
+    func fetchAllContacts() async {
         
         //get access to contacts store
         let store = CNContactStore()
         
         //specify which data keys we want to fetch
-        let keys = {CNContactGivenNameKey, CNContactPhoneNumbersKey} as [CNKeyDescriptor]
+        let keys = [CNContactGivenNameKey, CNContactPhoneNumbersKey] as [CNKeyDescriptor]
         
         //Create fetch request
-        let fetchRequest = CNContactFetchRequest(keysToFetch: <#T##[CNKeyDescriptor]#>)
+        let fetchRequest = CNContactFetchRequest(keysToFetch: keys)
         
         //call method to fetch all contacts
         do {
-        try store.enumerateContacts(with: <#T##CNContactFetchRequest#>, usingBlock: <#T##(CNContact, UnsafeMutablePointer<ObjCBool>) -> Void#>)
+            try store.enumerateContacts(with: fetchRequest, usingBlock: { contact, result in
+                //do something with the contact
+                
+                print(contact.givenName)
+                
+            })
         }
         catch {
             //if there is an error, handle it here
+            print("error")
         }
         
         
