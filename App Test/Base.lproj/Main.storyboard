@@ -68,6 +68,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxu-8I-GDW">
+                                <rect key="frame" x="150" y="538" width="92" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Let's Go!"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kti-0v-RvW"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
@@ -123,6 +129,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atd-uS-Vgz">
+                                <rect key="frame" x="139" y="569" width="115" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign me up!"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="58h-d7-OSF"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
